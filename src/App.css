@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.error-title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.error-link {
+  font-size: 1.2rem;
+  color: #721c24;
+  text-decoration: underline;
+}
+
+.error-link:hover {
+  color: #f5c6cb;
+}

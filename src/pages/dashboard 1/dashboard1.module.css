@@ -1,0 +1,52 @@
+.dateInput{
+    margin: 10px 40px 0px 40px;
+    display: flex;
+    justify-content: center;
+}
+.dateInput label{
+    margin: 0px 10px 0px 10px;
+}
+.flexDiv{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.tableDiv{
+    margin: 10px;
+    width: 60%;
+    min-width: 400px;
+}
+.chartDiv{
+    width: 30%;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.lineDiv{
+    width: 100%;
+    min-width: 300px;
+    margin: 10px auto 10px auto;
+}
+.barDiv{
+    width: 100%;
+    min-width: 300px;
+    margin: 0px auto 0px auto;
+}
+
+@media all and (max-width:1060px){
+    .tableDiv{
+        width: 90%;
+    }
+    .chartDiv{
+        flex-direction: row;
+        width: 100%;
+    }
+    .lineDiv, .barDiv{
+        margin: 0px;
+        width: max-content;
+        margin: 10px 10px 10px 10px;
+    }
+}
