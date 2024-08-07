@@ -17,7 +17,7 @@ export const Navbar=()=>{
                         </li>
                         <li className="nav-item">
                         <Link className="nav-link" to="/compare">Dashboard 2</Link>
-                        </li>   
+                        </li>
                     </ul>
                     </div>
                 </div>

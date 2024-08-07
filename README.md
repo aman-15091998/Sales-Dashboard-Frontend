@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Sales Analytics Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend part of the Sales Analytics web application where users can analyze the data in a tabular structure featuring filtering, sorting, and pagination. It also includes visual representations of data using bar and line charts.
 
-## Available Scripts
+Hosted Link: [https://sale-dash.netlify.app/](https://sale-dash.netlify.app/) (The backend is hosted on Render so it may take a few seconds to load the data on the first fetch).
 
-In the project directory, you can run:
+## How to Use
 
-### `npm start`
+1. Visit the link: [https://sale-dash.netlify.app/](https://sale-dash.netlify.app/)
+2. Select any date from the date picker between 10th July 2024 to 7th August 2024 and data will be displayed on the table and charts.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+First, set up the backend from here: [Sales-Dashboard-Backend](https://github.com/aman-15091998/Sales-Dashboard-Backend)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Open terminal in VS Code.
+2. Clone the project:
+    ```sh
+    git clone git@github.com:aman-15091998/Sales-Dashboard-Frontend.git
+    ```
+3. Move to the project folder.
+4. Install the dependencies:
+    ```sh
+    npm i
+    ```
+5. *Update the URLs in `Dashboard1.js` and `Dashboard2.js` if your backend is running on a port other than 5001.
+6. Start the server:
+    ```sh
+    npm start
+    ```
