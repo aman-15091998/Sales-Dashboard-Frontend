@@ -54,7 +54,7 @@ export const DashboardTwo=()=>{
                 </div>
                 <div>
                     <label className="form-label">Date 2:</label>
-                    <DatePicker selected={date} onChange={(d) => setCompareDate(d)} />
+                    <DatePicker selected={compareDate} onChange={(d) => setCompareDate(d)} />
                 </div>
             </div>
             <div className={styles.flexDiv}>
