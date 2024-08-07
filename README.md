@@ -11,7 +11,7 @@ Hosted Link: [https://sale-dash.netlify.app/](https://sale-dash.netlify.app/) (T
 
 ## Installation
 
-First, set up the backend from here: [Sales-Dashboard-Backend](https://github.com/aman-15091998/Sales-Dashboard-Backend)
+(OPTIONAL)You can set up the backend from here: [Sales-Dashboard-Backend](https://github.com/aman-15091998/Sales-Dashboard-Backend) or you can test on my hosted server which is already used in the code.
 
 1. Open terminal in VS Code.
 2. Clone the project:
@@ -23,7 +23,7 @@ First, set up the backend from here: [Sales-Dashboard-Backend](https://github.co
     ```sh
     npm i
     ```
-5. *Update the URLs in `Dashboard1.js` and `Dashboard2.js` if your backend is running on a port other than 5001.
+5. (OPTIONAL) You can update the base URLs in the api calls in `Dashboard1.js` and `Dashboard2.js` with your backend URL if you want to test on your server.
 6. Start the server:
     ```sh
     npm start
