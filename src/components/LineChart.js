@@ -14,6 +14,7 @@ export const LineChart=({data})=>{
         return acc;
       }, {});
     }
+
     let keys=[];
     let valArr=[];
     if(mergedData){

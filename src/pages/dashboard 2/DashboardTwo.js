@@ -13,9 +13,12 @@ export const DashboardTwo=()=>{
     const [date, setDate]=useState(new Date());
     const {transactions, setTransactions} =useValue();
     const [chartData, setChartData]=useState(transactions);
+    const [loading, setLoading]=useState(true);
+    
     useEffect(()=>{
         async function getTransactions(){
             try{
+                setLoading(true);
                 const res1=await fetch(`https://sales-dashboard-backend-rn35.onrender.com/api/transactions/filter/?date=${date.toDateString()}`);
                 const date1Data=await res1.json();
                 const res2=await fetch(`https://sales-dashboard-backend-rn35.onrender.com/api/transactions/filter/?date=${compareDate.toDateString()}`);
@@ -38,12 +41,14 @@ export const DashboardTwo=()=>{
                 });
                 setTransactions(combinedSalesData);
                 setChartData(combinedSalesData);
+                setLoading(false);
             }catch(err){
                 console.log(err);
             }
         }
         getTransactions();
-    }, [date, compareDate])
+    }, [date, compareDate]);
+    
     return (
         <div className={styles.mainDiv}>
             <h2 className={`text-center my-4`}>Dashboard 2</h2>
@@ -59,7 +64,7 @@ export const DashboardTwo=()=>{
             </div>
             <div className={styles.flexDiv}>
                 <div className={styles.tableDiv}>
-                <Table2 setChartData={setChartData} />
+                <Table2 setChartData={setChartData} loading={loading}/>
                 </div>
                 <div className={styles.chartDiv}>
                     <div className={styles.barDiv}>

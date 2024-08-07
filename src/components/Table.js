@@ -1,13 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-alpine.css';
 import { useValue } from '../context/mainContext';
 
-export const Table = ({setChartData, pageSize, pageSizeOptions}) => {
+export const Table = ({setChartData, pageSize, pageSizeOptions, loading}) => {
   
   const {transactions, setTransactions} =useValue();
-  useEffect(()=>{},[]);
+  const gridRef=useRef();
+  
+  useEffect(()=>{
+    if(gridRef.current.api)
+      gridRef.current.api.setFilterModel(null);
+  }, [transactions]); 
+
+  useEffect(()=>{
+    if(gridRef.current.api){
+      if(loading)
+        gridRef.current.api.showLoadingOverlay();
+      else
+        gridRef.current.api.hideOverlay();
+    }
+  }, [loading]);
+
   const hanldeFilteredData = (params) => {
     const filteredData = [];
     params.api.forEachNodeAfterFilter(node => filteredData.push(node.data));
@@ -23,8 +38,6 @@ export const Table = ({setChartData, pageSize, pageSizeOptions}) => {
       { headerName: 'Date Of Sale', field: 'date', sortable: true, filter: false  },
     ];
  
-  
-
   return (
     <div className="ag-theme-alpine" style={{ height: 400, width: '100%' }}>
       <AgGridReact 
@@ -32,6 +45,7 @@ export const Table = ({setChartData, pageSize, pageSizeOptions}) => {
         columnDefs={columnDefs}
         defaultColDef={{ flex: 1, minWidth: 150, resizable: true }}
         onFilterChanged={hanldeFilteredData}
+        ref={gridRef}
 
         pagination={true}
         paginationPageSize={pageSize || 10}

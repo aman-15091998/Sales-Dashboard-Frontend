@@ -8,6 +8,7 @@ export const BarChart=({data})=>{
         keys=data.map(p=>p.name);
         valArr=data.map(p=>p.amount);
     }
+    
     const d={
         labels: keys,
         datasets:[
@@ -19,18 +20,10 @@ export const BarChart=({data})=>{
             }
         ]
     }
-    const opt = {
-        // scales: {
-        //   y: {
-        //     ticks: {
-        //       stepSize: 1, 
-        //     }
-        //   }
-        // }
-      };
+ 
     return (
         <>
-            <Bar className={styles.bar} data={d} options={opt}/>
+            <Bar className={styles.bar} data={d} />
         </>
     )
 }

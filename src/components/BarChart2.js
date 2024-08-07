@@ -30,20 +30,10 @@ export const BarChart2=({chartData})=>{
             }
         ]
     }
-    
-    const opt = {
-        scales: {
-        //   y: {
-        //         ticks: {
-        //         stepSize: 1, 
-        //         }
-        //     }
-        }
-      };
       
     return (
         <>
-            <Bar className={styles.bar} data={d} options={opt}/>
+            <Bar className={styles.bar} data={d} />
         </>
     )
 }

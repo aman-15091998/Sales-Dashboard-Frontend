@@ -25,6 +25,7 @@ export const LineChart2=({chartData})=>{
             return acc;
         }, {});
     }
+
     let keys=[];
     let valArr1=[];
     if(mergedChartData1){
@@ -33,12 +34,14 @@ export const LineChart2=({chartData})=>{
             valArr1.push(mergedChartData1[obj].amount);
         }
     }
+
     let valArr2=[];
     if(mergedChartData2){
         for(let obj in mergedChartData1){
             valArr2.push(mergedChartData2[obj].amount);
         }
     }
+    
     const d={
         labels: keys,
         datasets:[
