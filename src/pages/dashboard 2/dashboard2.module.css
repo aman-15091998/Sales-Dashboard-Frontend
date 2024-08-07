@@ -50,3 +50,10 @@
         margin: 10px 10px 10px 10px;
     }
 }
+@media all and (max-width:450px){
+    .dateInput{
+        flex-direction: column;
+        height: 70px;
+        justify-content: space-between;
+    }
+}
