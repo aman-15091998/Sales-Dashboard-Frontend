@@ -16,7 +16,7 @@ export const DashboardOne=()=>{
     useEffect(()=>{
         async function getTransactions(){
             try{
-                const res=await fetch(`http://localhost:5001/api/transactions/filter/?date=${date.toDateString()}`);
+                const res=await fetch(`https://sales-dashboard-backend-rn35.onrender.com/api/transactions/filter/?date=${date.toDateString()}`);
                 const dataObj=await res.json();
                 setTransactions(dataObj.data);
                 setChartData(dataObj.data);

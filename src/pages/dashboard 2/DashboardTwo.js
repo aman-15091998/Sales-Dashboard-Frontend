@@ -16,9 +16,9 @@ export const DashboardTwo=()=>{
     useEffect(()=>{
         async function getTransactions(){
             try{
-                const res1=await fetch(`http://localhost:5001/api/transactions/filter/?date=${date.toDateString()}`);
+                const res1=await fetch(`https://sales-dashboard-backend-rn35.onrender.com/api/transactions/filter/?date=${date.toDateString()}`);
                 const date1Data=await res1.json();
-                const res2=await fetch(`http://localhost:5001/api/transactions/filter/?date=${compareDate.toDateString()}`);
+                const res2=await fetch(`https://sales-dashboard-backend-rn35.onrender.com/api/transactions/filter/?date=${compareDate.toDateString()}`);
                 const date2Data=await res2.json();
                
                 const allProducts = new Set();
