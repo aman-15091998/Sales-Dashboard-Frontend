@@ -2,7 +2,7 @@
 
 This is the frontend part of the Sales Analytics web application where users can analyze the data in a tabular structure featuring filtering, sorting, and pagination. It also includes visual representations of data using bar and line charts.
 
-Hosted Link: [https://sale-dash.netlify.app/](https://sale-dash.netlify.app/) (The backend is hosted on Render so it may take a few seconds to load the data on the first fetch).
+Hosted Link: [https://sale-dash.netlify.app/](https://sale-dash.netlify.app/) (The backend is hosted on Render so it may take a few seconds to load the data on the first fetch please be patient).
 
 ## How to Use
 
